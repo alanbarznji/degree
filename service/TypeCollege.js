@@ -1,0 +1,12 @@
+const asyncHandler = require("express-async-handler");
+const ErrorApi = require("../utils/ErroreApi");
+const factory = require("./hundling");
+const Type = require("../model/TypeCollege");
+// const jwt = require("jsonwebtoken");
+// const bcrypt = require("bcryptjs");
+// const crypto = require("crypto");
+exports.c_Type = factory.CreateOne(Type);
+exports.g_Type = factory.GetAll(Type);
+exports.gs_Type = factory.GetOne(Type);
+exports.u_Type = factory.UpdateOne(Type);
+exports.d_Type = factory.DeleteOne(Type);

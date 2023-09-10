@@ -1,0 +1,12 @@
+const asyncHandler = require("express-async-handler");
+const User = require("../model/user");
+const ErrorApi = require("../utils/ErroreApi");
+const factory=require('./hundling')
+// const jwt = require("jsonwebtoken");
+// const bcrypt = require("bcryptjs");
+// const crypto = require("crypto");
+exports.c_user=factory.CreateOne(User)
+exports.g_user=factory.GetAll(User)
+exports.gs_user=factory.GetOne(User)
+exports.u_user=factory.UpdateOne(User);
+exports.d_user=factory.DeleteOne(User);
